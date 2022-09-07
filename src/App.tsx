@@ -1,15 +1,17 @@
 import { defineComponent, ref } from 'vue'
+import { RouterView } from 'vue-router'
 export default defineComponent({
   setup() {
-    const x = ref(0)
-    const onClick = () => {
-      x.value++
-    }
-    return () => (
+    return () => <>
+      <header>123</header>
+      <ul>
+        <li>
+          <router-link to="/">Ho1me</router-link>
+        </li>
+      </ul>
       <div>
-        {x.value}
-        <button onClick={onClick}>+1</button>
+        <RouterView></RouterView>
       </div>
-    )
+      </>
   }
 })
