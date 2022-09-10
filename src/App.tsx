@@ -1,17 +1,13 @@
-import { defineComponent, ref } from 'vue'
-import { RouterView } from 'vue-router'
-export default defineComponent({
+import { defineComponent } from "vue";
+import { RouterView } from "vue-router";
+import "./App.scss"
+
+export const App = defineComponent({
   setup() {
-    return () => <>
-      <header>123</header>
-      <ul>
-        <li>
-          <router-link to="/">Ho1me</router-link>
-        </li>
-      </ul>
+    return () => (
       <div>
-        <RouterView></RouterView>
+        <RouterView />
       </div>
-      </>
+    )
   }
 })
